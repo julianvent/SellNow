@@ -12,7 +12,7 @@
    <children>
       <VBox prefHeight="130.0" styleClass="logo_container">
          <children>
-            <FontAwesomeIconView glyphName="SHOPPING_CART" size="50" text="" />
+            <FontAwesomeIconView glyphName="SHOPPING_CART" size="55" text="" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SellNow" />
          </children>
       </VBox>
