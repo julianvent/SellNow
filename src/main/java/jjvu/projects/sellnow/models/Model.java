@@ -1,5 +1,6 @@
 package jjvu.projects.sellnow.models;
 
+import javafx.stage.Stage;
 import jjvu.projects.sellnow.views.ViewFactory;
 
 public class Model {

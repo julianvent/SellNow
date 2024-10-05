@@ -4,6 +4,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import jjvu.projects.sellnow.models.Model;
 
 import java.net.URL;
@@ -21,6 +22,10 @@ public class LoginController implements Initializable {
     }
 
     public void onLogin() {
+        // Close Login window
+        Stage stage = (Stage)loginButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+
         Model.getInstance().getViewFactory().showClientWindow();
     }
 }

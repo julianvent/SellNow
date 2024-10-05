@@ -28,6 +28,7 @@ public class ViewFactory {
         createStage(loader);
     }
 
+
     /*
     Utility
      */
@@ -45,5 +46,9 @@ public class ViewFactory {
         stage.setResizable(false);
         stage.setTitle("SellNow");
         stage.show();
+    }
+
+    public void closeStage(Stage stage) {
+        stage.close();
     }
 }
