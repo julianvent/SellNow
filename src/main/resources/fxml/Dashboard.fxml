@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="jjvu.projects.sellnow.controllers.DashboardController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="840.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.DashboardController">
+   <children>
+      <Label fx:id="shopNameLabel" layoutX="10.0" layoutY="10.0" text="Nombre de la Tienda" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0" />
+      <Label fx:id="currentDateLabel" text="Hoy: 2024-10-04" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="24.0" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Crear Venta Rápida" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="100.0" />
+      <AnchorPane prefHeight="300.0" prefWidth="670.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="144.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Productos" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="20.0" />
+            <Text layoutX="10.0" layoutY="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ventas" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="20.0" />
+            <Text layoutX="20.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Precio" AnchorPane.leftAnchor="356.0" AnchorPane.topAnchor="20.0" />
+            <Button mnemonicParsing="false" text="Crear Venta" AnchorPane.bottomAnchor="35.0" AnchorPane.rightAnchor="68.0">
+               <graphic>
+                  <FontAwesomeIconView fx:id="fastSaleCreateButton" glyphName="PLUS" size="12" />
+               </graphic>
+            </Button>
+            <Label fx:id="totalImportLabel" text="Importe Total: $144.0" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="254.0" />
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Últimas Ventas" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="470.0" />
+      <ListView fx:id="lastSalesListView" prefHeight="300.0" prefWidth="650.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="514.0" />
+   </children>
 </AnchorPane>
