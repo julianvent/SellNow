@@ -1,17 +1,31 @@
-.login_container {
-    -fx-background-color: #FFFFFF;
+@font-face {
+    src: url("fonts/Inter_18pt-Regular.ttf");
 }
 
-Text {
-    -fx-font-family: Inter;
+@font-face {
+    src: url("fonts/Inter_18pt-Medium.ttf");
+}
+
+@font-face {
+    src: url("fonts/Inter_18pt-Bold.ttf");
+}
+
+.login_container {
+    -fx-background-color: #FFFFFF;
+    -fx-font-family: "Inter 18pt";
 }
 
 .motto_text {
-    -fx-font-size: 12px;
+    -fx-font-size: 14px;
 }
 
 .app_name_text {
     -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.welcome_text {
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
 }
 
@@ -38,18 +52,16 @@ Text {
 .login_form_container {
     -fx-spacing: 25;
     -fx-padding: 15 0 10 0;
-    -fx-alignment: left_center;
+    -fx-alignment: center-left;
     -fx-font-size: 18px;
-    -fx-font-weight: medium;
+    -fx-font-weight: normal;
 }
 
 .login_form_container TextField {
-    -fx-font-family: Inter;
     -fx-font-size: 18px;
-    -fx-pref-height: 42;
-    -fx-font-weight: normal;
+    -fx-padding: 12 10;
     -fx-border-color: #D9D9D9;
-    -fx-border-radius: 8;
+    -fx-border-radius: 10;
     -fx-border-width: 0;
 }
 
@@ -57,10 +69,9 @@ Text {
     -fx-background-color: #EE0004;
     -fx-text-fill: #FFFFFF;
     -fx-max-width: infinity;
-    -fx-font-family: Inter;
     -fx-font-size: 20px;
-    -fx-border-radius: 5;
     -fx-font-weight: bold;
+    -fx-border-radius: 8;
     -fx-padding: 10 0 10 0;
 }
 

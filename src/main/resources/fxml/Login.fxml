@@ -6,29 +6,22 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="login_container" stylesheets="@../styles/Login.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.LoginController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="login_container" stylesheets="@../styles/Login.css" xmlns="http://javafx.com/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.LoginController">
     <VBox prefHeight="500.0" prefWidth="220.0" styleClass="login_logo_container">
-        <FontAwesomeIconView glyphName="SHOPPING_CART" size="70" text="" />
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="app_name_text" text="SellNow">
-         <font>
-            <Font name="System Bold" size="20.0" />
-         </font></Text>
+        <FontAwesomeIconView glyphName="SHOPPING_CART" size="70" />
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="app_name_text" text="SellNow" />
         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="motto_text" text="Some motto i don't know." />
     </VBox>
     <VBox prefHeight="500.0" prefWidth="480.0" styleClass="login_credentials_container" AnchorPane.leftAnchor="220.0">
-        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenido!">
-         <font>
-            <Font name="System Bold" size="30.0" />
-         </font></Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="welcome_text" text="¡Bienvenido!" />
         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="login_form_container">
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Usuario:"/>
-            <TextField fx:id="usernameField" promptText="Username"/>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:"/>
-            <TextField fx:id="passwordField" promptText="Password"/>
-            <Button fx:id="loginButton" mnemonicParsing="false" text="Acceder"/>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Usuario:" />
+            <TextField fx:id="usernameField" promptText="Username" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" />
+            <TextField fx:id="passwordField" promptText="Password" />
+            <Button fx:id="loginButton" mnemonicParsing="false" text="Acceder" />
         </VBox>
         <Label fx:id="errorLabel" styleClass="error_label" />
     </VBox>
