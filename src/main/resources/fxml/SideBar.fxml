@@ -7,81 +7,68 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="220.0" styleClass="side_bar_container" stylesheets="@../styles/SideBar.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <VBox prefHeight="130.0" styleClass="logo_container">
-         <children>
-            <FontAwesomeIconView glyphName="SHOPPING_CART" size="55" text="" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SellNow" />
-         </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="220.0" styleClass="side_bar_container" stylesheets="@../styles/SideBar.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.SiderBarController">
+   <VBox prefHeight="130.0" styleClass="logo_container">
+      <FontAwesomeIconView glyphName="SHOPPING_CART" size="55" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SellNow" />
+   </VBox>
+   <Button fx:id="mainMenuButton" mnemonicParsing="false" prefWidth="175.0" text="Menú Principal">
+      <graphic>
+         <FontAwesomeIconView glyphName="HOME" />
+      </graphic>
+   </Button>
+   <VBox prefHeight="200.0" styleClass="control_container">
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <Label text="Tienda">
+            <graphic>
+               <FontAwesomeIconView glyphName="IMAGE" />
+            </graphic>
+         </Label>
+         <Button fx:id="userButton" mnemonicParsing="false" text="Ver Perfil">
+            <graphic>
+               <FontAwesomeIconView glyphName="USER_ALT" text="" />
+            </graphic>
+         </Button>
+         <Button fx:id="logoutButton" mnemonicParsing="false" text="Cerrar Sesión">
+            <graphic>
+               <FontAwesomeIconView glyphName="EXTERNAL_LINK" />
+            </graphic>
+         </Button>
       </VBox>
-      <Button mnemonicParsing="false" prefWidth="175.0" styleClass="side_bar_container_home_button" text="Menú Principal">
-         <graphic>
-            <FontAwesomeIconView glyphName="HOME" />
-         </graphic>
-      </Button>
-      <VBox prefHeight="200.0" styleClass="control_container">
-         <children>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label text="Tienda">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="IMAGE" />
-                     </graphic>
-                  </Label>
-                  <Button mnemonicParsing="false" text="Ver Perfil">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="USER_ALT" text="" />
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Cerrar Sesión">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="EXTERNAL_LINK" text="" />
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-            <Line endX="186.0" stroke="#cccccc" />
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label text="Ventas">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="CLIPBOARD" />
-                     </graphic>
-                  </Label>
-                  <Button mnemonicParsing="false" text="Crear Venta">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="PLUS" />
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Ver Ventas">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="LIST" />
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                  <Label text="Productos">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="SHOPPING_BAG" />
-                     </graphic>
-                  </Label>
-                  <Button mnemonicParsing="false" text="Crear Producto">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="PLUS" />
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Ver Catálogo">
-                     <graphic>
-                        <FontAwesomeIconView glyphName="LIST" />
-                     </graphic>
-                  </Button>
-               </children>
-            </VBox>
-         </children>
+      <Line endX="186.0" stroke="#cccccc" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <Label text="Ventas">
+            <graphic>
+               <FontAwesomeIconView glyphName="CLIPBOARD" />
+            </graphic>
+         </Label>
+         <Button fx:id="createSaleButton" mnemonicParsing="false" text="Crear Venta">
+            <graphic>
+               <FontAwesomeIconView glyphName="PLUS" />
+            </graphic>
+         </Button>
+         <Button fx:id="listSalesButton" mnemonicParsing="false" text="Ver Ventas">
+            <graphic>
+               <FontAwesomeIconView glyphName="LIST" />
+            </graphic>
+         </Button>
       </VBox>
-   </children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <Label text="Productos">
+            <graphic>
+               <FontAwesomeIconView glyphName="SHOPPING_BAG" />
+            </graphic>
+         </Label>
+         <Button fx:id="createProductButton" mnemonicParsing="false" text="Crear Producto">
+            <graphic>
+               <FontAwesomeIconView glyphName="PLUS" />
+            </graphic>
+         </Button>
+         <Button fx:id="listProductsButton" mnemonicParsing="false" text="Ver Catálogo">
+            <graphic>
+               <FontAwesomeIconView glyphName="LIST" />
+            </graphic>
+         </Button>
+      </VBox>
+   </VBox>
 </VBox>
