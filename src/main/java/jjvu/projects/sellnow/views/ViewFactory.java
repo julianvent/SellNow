@@ -3,6 +3,7 @@ package jjvu.projects.sellnow.views;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import jjvu.projects.sellnow.controllers.ClientController;
 
 import java.io.IOException;
 
@@ -17,6 +18,15 @@ public class ViewFactory {
         createStage(loader);
     }
 
+    /*
+    MainView Window
+     */
+    public void showClientWindow() {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Client.fxml"));
+        ClientController controller = new ClientController();
+        loader.setController(controller);
+        createStage(loader);
+    }
 
     /*
     Utility

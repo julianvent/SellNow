@@ -2,6 +2,7 @@
 
 .dashboard_container {
     -fx-background-color: #EEEEEE;
+    -fx-background-radius: 8;
     -fx-font-family: "Inter 18pt";
 }
 

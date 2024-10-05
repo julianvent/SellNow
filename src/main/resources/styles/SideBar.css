@@ -18,7 +18,7 @@ Button:hover {
     -fx-background-color: #EE0004;
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 16;
-    -fx-alignment: left;
+    -fx-alignment: center-left;
     -fx-pref-height: 35;
     -fx-background-radius: 8;
 }
