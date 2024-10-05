@@ -8,20 +8,20 @@
 <?import javafx.scene.text.Text?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="220.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="220.0" styleClass="side_bar_container" stylesheets="@../styles/SideBar.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox prefHeight="130.0">
+      <VBox prefHeight="130.0" styleClass="logo_container">
          <children>
-            <FontAwesomeIconView glyphName="SHOPPING_CART" />
+            <FontAwesomeIconView glyphName="SHOPPING_CART" size="50" text="" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SellNow" />
          </children>
       </VBox>
-      <Button mnemonicParsing="false" prefWidth="175.0" text="Menú Principal">
+      <Button mnemonicParsing="false" prefWidth="175.0" styleClass="side_bar_container_home_button" text="Menú Principal">
          <graphic>
             <FontAwesomeIconView glyphName="HOME" />
          </graphic>
       </Button>
-      <VBox prefHeight="200.0">
+      <VBox prefHeight="200.0" styleClass="control_container">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
@@ -32,7 +32,7 @@
                   </Label>
                   <Button mnemonicParsing="false" text="Ver Perfil">
                      <graphic>
-                        <FontAwesomeIconView glyphName="USER_ALT" />
+                        <FontAwesomeIconView glyphName="USER_ALT" text="" />
                      </graphic>
                   </Button>
                   <Button mnemonicParsing="false" text="Cerrar Sesión">
@@ -42,7 +42,7 @@
                   </Button>
                </children>
             </VBox>
-            <Line endX="186.0" />
+            <Line endX="186.0" stroke="#cccccc" />
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Label text="Ventas">
@@ -50,7 +50,7 @@
                         <FontAwesomeIconView glyphName="CLIPBOARD" />
                      </graphic>
                   </Label>
-                  <Button mnemonicParsing="false" text="Ver Perfil">
+                  <Button mnemonicParsing="false" text="Crear Venta">
                      <graphic>
                         <FontAwesomeIconView glyphName="PLUS" />
                      </graphic>
@@ -71,7 +71,7 @@
                   </Label>
                   <Button mnemonicParsing="false" text="Crear Producto">
                      <graphic>
-                        <FontAwesomeIconView glyphName="USER_ALT" />
+                        <FontAwesomeIconView glyphName="PLUS" />
                      </graphic>
                   </Button>
                   <Button mnemonicParsing="false" text="Ver Catálogo">
