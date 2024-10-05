@@ -1,0 +1,65 @@
+@import "Inter.css";
+
+.dashboard_container {
+    -fx-background-color: #EEEEEE;
+    -fx-font-family: "Inter 18pt";
+}
+
+.dashboard_container Text {
+    -fx-fill: #111111;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+.dashboard_container Label {
+    -fx-text-fill: #111111;
+}
+
+.shop_label {
+    -fx-font-weight: bold;
+    -fx-font-size: 32;
+}
+
+.date_label {
+    -fx-text-fill: #BBBBBB;
+    -fx-font-size: 16;
+}
+
+.fast_sale_container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 8;
+}
+
+.fast_sale_container Text {
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+
+.fast_sale_container HBox Label {
+    -fx-font-size: 16;
+    -fx-text-fill: #EE0004;
+    -fx-font-weight: bold;
+}
+
+.fast_sale_container HBox Text {
+    -fx-font-size: 16;
+}
+
+.fast_sale_container Button {
+    -fx-background-color: #EE0004;
+    -fx-background-radius: 8;
+    -fx-pref-width: 140;
+    -fx-pref-height: 40;
+    -fx-font-size: 16;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.sales_list_view {
+    -fx-background-color: #EEEEEE;
+}
+
+.sales_list_view .list-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 15 0;
+}
