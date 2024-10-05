@@ -1,0 +1,75 @@
+.login_container {
+    -fx-background-color: #FFFFFF;
+}
+
+Text {
+    -fx-font-family: Inter;
+}
+
+.motto_text {
+    -fx-font-size: 12px;
+}
+
+.app_name_text {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.login_logo_container {
+    -fx-background-color: linear-gradient(to right, #EE0004, #9A0103);
+    -fx-alignment: center;
+    -fx-spacing: 10;
+}
+
+.login_logo_container FontAwesomeIconView {
+    -fx-fill: #FFFFFF;
+}
+
+.login_logo_container Text {
+    -fx-fill: #FFFFFF;
+}
+
+.login_credentials_container {
+    -fx-spacing: 10;
+    -fx-padding: 30 50;
+    -fx-alignment: top-center;
+}
+
+.login_form_container {
+    -fx-spacing: 25;
+    -fx-padding: 15 0 10 0;
+    -fx-alignment: left_center;
+    -fx-font-size: 18px;
+    -fx-font-weight: medium;
+}
+
+.login_form_container TextField {
+    -fx-font-family: Inter;
+    -fx-font-size: 18px;
+    -fx-pref-height: 42;
+    -fx-font-weight: normal;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 8;
+    -fx-border-width: 0;
+}
+
+.login_form_container Button {
+    -fx-background-color: #EE0004;
+    -fx-text-fill: #FFFFFF;
+    -fx-max-width: infinity;
+    -fx-font-family: Inter;
+    -fx-font-size: 20px;
+    -fx-border-radius: 5;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 10 0;
+}
+
+.login_form_container Button:hover {
+    -fx-cursor: hand;
+}
+
+.error_label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #EE0004;
+    -fx-font-weight: bold;
+}
