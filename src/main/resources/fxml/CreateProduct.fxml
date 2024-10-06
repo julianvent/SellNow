@@ -30,7 +30,7 @@
         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad Mínima de Existencias:"/>
         <TextField fx:id="minStockField" promptText="1"/>
     </VBox>
-    <Button fx:id="createProductButton" mnemonicParsing="false" styleClass="create_product_button" text="Crear Producto"
+    <Button fx:id="createProductButton" mnemonicParsing="false" text="Crear Producto"
             AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="50.0">
         <graphic>
           <FontAwesomeIconView fill="WHITE" glyphName="PLUS" wrappingWidth="20.0"/>

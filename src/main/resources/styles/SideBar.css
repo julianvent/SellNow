@@ -19,7 +19,7 @@ Button:hover {
     -fx-text-fill: #FFFFFF;
     -fx-font-size: 16;
     -fx-alignment: center-left;
-    -fx-pref-height: 35;
+    -fx-pref-height: 40;
     -fx-background-radius: 8;
 }
 

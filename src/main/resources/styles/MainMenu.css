@@ -1,7 +1,7 @@
 @import "Inter.css";
 
 .main_menu_container {
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: #FFFFFF;
     -fx-background-radius: 8;
     -fx-font-family: "Inter 18pt";
 }
@@ -27,8 +27,8 @@
 }
 
 .fast_sale_container {
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 8;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 8;
 }
 
 .fast_sale_container Text {
@@ -57,10 +57,11 @@
 }
 
 .sales_list_view {
-    -fx-background-color: #EEEEEE;
+    -fx-background-color: #FFFFFF;
 }
 
 .sales_list_view .list-cell {
     -fx-background-color: #FFFFFF;
+    -fx-border-color: #DDDDDD;
     -fx-padding: 15 0;
 }

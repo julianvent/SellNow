@@ -28,7 +28,7 @@
     -fx-padding: 10 14;
 }
 
-.create_product_button {
+Button {
     -fx-background-color: #EE0004;
     -fx-background-radius: 8;
     -fx-text-fill: #FFFFFF;
@@ -36,6 +36,10 @@
     -fx-font-weight: bold;
     -fx-font-size: 20;
     -fx-padding: 10 20;
+}
+
+Button:hover {
+    -fx-cursor: hand;
 }
 
 .create_product_status_label {
