@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="840.0" prefWidth="750.0" styleClass="sales_list_container" stylesheets="@../styles/ProductList.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.ProductListController">
+<AnchorPane prefHeight="840.0" prefWidth="750.0" styleClass="product_list_container" stylesheets="@../styles/ProductList.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.ProductListController">
     <TableView fx:id="productsTableView" prefHeight="200.0" prefWidth="680.0" styleClass="product_table" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="90.0">
       <columns>
           <TableColumn prefWidth="75.0" text="ID" />
@@ -19,6 +19,6 @@
           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
         </columnResizePolicy>
     </TableView>
-    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="sales_list_container_title" text="Text" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0" />
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_list_container_title" text="Text" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0" />
     <Line endY="750.0" stroke="#cccccc" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="73.0" />
 </AnchorPane>
