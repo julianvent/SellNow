@@ -2,27 +2,32 @@ package jjvu.projects.sellnow.views;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import jjvu.projects.sellnow.controllers.ClientController;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class ViewFactory {
+    private AnchorPane dashboardView;
+    private AnchorPane createProductView;
+
     public ViewFactory() {}
 
     /*
     Login Window
      */
     public void showLoginWindow() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
+        FXMLLoader loader = createLoader("Login.fxml");
         createStage(loader);
     }
 
     /*
-    MainView Window
+    Client Window
      */
     public void showClientWindow() {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Client.fxml"));
+        FXMLLoader loader = createLoader("Client.fxml");
         ClientController controller = new ClientController();
         loader.setController(controller);
         createStage(loader);
@@ -30,8 +35,33 @@ public class ViewFactory {
 
 
     /*
-    Utility
+    Submenus
      */
+    public AnchorPane getDashboardView() {
+        if (dashboardView == null) {
+            try {
+                dashboardView = createLoader("Dashboard.fxml").load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return dashboardView;
+    }
+
+    public AnchorPane getCreateProductView() {
+        if (createProductView == null) {
+            try {
+                createProductView = createLoader("CreateProduct.fxml").load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return createProductView;
+    }
+
+    /*
+    Utility
+    */
     private void createStage(FXMLLoader loader) {
         Scene scene;
 
@@ -50,5 +80,9 @@ public class ViewFactory {
 
     public void closeStage(Stage stage) {
         stage.close();
+    }
+
+    public FXMLLoader createLoader(String source) {
+        return new FXMLLoader(getClass().getResource("/fxml/" + source));
     }
 }

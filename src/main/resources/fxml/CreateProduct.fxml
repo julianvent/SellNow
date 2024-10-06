@@ -10,29 +10,32 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="840.0" prefWidth="760.0" styleClass="create_product_container" stylesheets="@../styles/CreateProduct.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.CreateProductController">
-   <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="create_product_container_title" text="Crear Producto" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0" />
-      <Line endY="750.0" stroke="#cccccc" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="73.0" />
-      <VBox prefHeight="200.0" prefWidth="400.0" styleClass="product_form_container" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="80.0">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Producto:" />
-            <TextField fx:id="productNameField" promptText="Nombre" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio Unitario:" />
-            <TextField fx:id="unitPriceField" promptText="100.0" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoría:" />
-            <TextField fx:id="categoryField" promptText="Categoría" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Existencias:" />
-            <TextField fx:id="stockField" promptText="10" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad Mínima de Existencias:" />
-            <TextField fx:id="minStockField" promptText="1" />
-         </children>
-      </VBox>
-      <Button fx:id="createProductButton" mnemonicParsing="false" styleClass="create_product_button" text="Crear Producto" AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="50.0">
-         <graphic>
-            <FontAwesomeIconView fill="WHITE" glyphName="PLUS" wrappingWidth="20.0" />
-         </graphic>
-      </Button>
-      <Label fx:id="createStatusLabel" styleClass="create_product_status_label" text="Producto Creado Con Éxito" AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="290.0" />
-   </children>
+<AnchorPane prefHeight="840.0" prefWidth="760.0" styleClass="create_product_container"
+            stylesheets="@../styles/CreateProduct.css" xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="jjvu.projects.sellnow.controllers.CreateProductController">
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="create_product_container_title" text="Crear Producto"
+          AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0"/>
+    <Line endY="750.0" stroke="#cccccc" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="73.0"/>
+    <VBox prefHeight="200.0" prefWidth="400.0" styleClass="product_form_container" AnchorPane.leftAnchor="50.0"
+          AnchorPane.topAnchor="80.0">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre del Producto:"/>
+        <TextField fx:id="productNameField" promptText="Nombre"/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Precio Unitario:"/>
+        <TextField fx:id="unitPriceField" promptText="100.0"/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Categoría:"/>
+        <TextField fx:id="categoryField" promptText="Categoría"/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Existencias:"/>
+        <TextField fx:id="stockField" promptText="10"/>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad Mínima de Existencias:"/>
+        <TextField fx:id="minStockField" promptText="1"/>
+    </VBox>
+    <Button fx:id="createProductButton" mnemonicParsing="false" styleClass="create_product_button" text="Crear Producto"
+            AnchorPane.bottomAnchor="160.0" AnchorPane.leftAnchor="50.0">
+        <graphic>
+          <FontAwesomeIconView fill="WHITE" glyphName="PLUS" wrappingWidth="20.0"/>
+        </graphic>
+    </Button>
+    <Label fx:id="createStatusLabel" styleClass="create_product_status_label" text="Producto Creado Con Éxito"
+           AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="290.0"/>
 </AnchorPane>
