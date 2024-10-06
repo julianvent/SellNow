@@ -36,6 +36,6 @@
           <FontAwesomeIconView fill="WHITE" glyphName="PLUS" wrappingWidth="20.0"/>
         </graphic>
     </Button>
-    <Label fx:id="createStatusLabel" styleClass="create_product_status_label" text="Producto Creado Con Éxito"
+    <Label fx:id="createStatusLabel" styleClass="create_product_status_label"
            AnchorPane.bottomAnchor="170.0" AnchorPane.leftAnchor="290.0"/>
 </AnchorPane>

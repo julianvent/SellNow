@@ -14,6 +14,7 @@ public class ViewFactory {
     private final ObjectProperty<SubmenuOptions> clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane createProductView;
+    private AnchorPane productTableView;
 
     public ViewFactory() {
         clientSelectedMenuItem = new SimpleObjectProperty<>(SubmenuOptions.MAIN_MENU);
@@ -46,30 +47,20 @@ public class ViewFactory {
     Submenus
      */
     public AnchorPane getDashboardView() {
-        if (dashboardView == null) {
-            try {
-                dashboardView = createLoader("MainMenu.fxml").load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return dashboardView;
+        return getView(dashboardView, "Dashboard.fxml");
     }
 
     public AnchorPane getCreateProductView() {
-        if (createProductView == null) {
-            try {
-                createProductView = createLoader("CreateProduct.fxml").load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-        return createProductView;
+        return getView(createProductView, "CreateProduct.fxml");
+    }
+
+    public AnchorPane getProductTableView() {
+        return getView(productTableView, "ProductTable.fxml");
     }
 
     /*
-    Utility
-    */
+        Utility
+        */
     private void createStage(FXMLLoader loader) {
         Scene scene;
 
@@ -92,5 +83,16 @@ public class ViewFactory {
 
     public FXMLLoader createLoader(String source) {
         return new FXMLLoader(getClass().getResource("/fxml/" + source));
+    }
+
+    public <T> T getView(T view, String source) {
+        if (view == null) {
+            try {
+                view = createLoader(source).load();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        return view;
     }
 }
