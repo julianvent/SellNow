@@ -33,7 +33,7 @@ public class ViewFactory {
     Utility
      */
     private void createStage(FXMLLoader loader) {
-        Scene scene = null;
+        Scene scene;
 
         try {
             scene = new Scene(loader.load());

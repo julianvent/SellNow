@@ -14,24 +14,24 @@
    </VBox>
    <Button fx:id="mainMenuButton" mnemonicParsing="false" prefWidth="175.0" text="Menú Principal">
       <graphic>
-         <FontAwesomeIconView glyphName="HOME" />
+         <FontAwesomeIconView glyphName="HOME" wrappingWidth="20.0" />
       </graphic>
    </Button>
    <VBox prefHeight="200.0" styleClass="control_container">
       <VBox prefHeight="200.0" prefWidth="100.0">
          <Label text="Tienda">
             <graphic>
-               <FontAwesomeIconView glyphName="IMAGE" />
+               <FontAwesomeIconView glyphName="IMAGE" wrappingWidth="20.0" />
             </graphic>
          </Label>
          <Button fx:id="userButton" mnemonicParsing="false" text="Ver Perfil">
             <graphic>
-               <FontAwesomeIconView glyphName="USER_ALT" text="" />
+               <FontAwesomeIconView glyphName="USER_ALT" wrappingWidth="20.0" />
             </graphic>
          </Button>
          <Button fx:id="logoutButton" mnemonicParsing="false" text="Cerrar Sesión">
             <graphic>
-               <FontAwesomeIconView glyphName="EXTERNAL_LINK" />
+               <FontAwesomeIconView glyphName="EXTERNAL_LINK" wrappingWidth="20.0" />
             </graphic>
          </Button>
       </VBox>
@@ -39,34 +39,34 @@
       <VBox prefHeight="200.0" prefWidth="100.0">
          <Label text="Ventas">
             <graphic>
-               <FontAwesomeIconView glyphName="CLIPBOARD" />
+               <FontAwesomeIconView glyphName="CLIPBOARD" wrappingWidth="20.0" />
             </graphic>
          </Label>
          <Button fx:id="createSaleButton" mnemonicParsing="false" text="Crear Venta">
             <graphic>
-               <FontAwesomeIconView glyphName="PLUS" />
+               <FontAwesomeIconView glyphName="PLUS" wrappingWidth="20.0" />
             </graphic>
          </Button>
          <Button fx:id="listSalesButton" mnemonicParsing="false" text="Ver Ventas">
             <graphic>
-               <FontAwesomeIconView glyphName="LIST" />
+               <FontAwesomeIconView glyphName="LIST" wrappingWidth="20.0" />
             </graphic>
          </Button>
       </VBox>
       <VBox prefHeight="200.0" prefWidth="100.0">
          <Label text="Productos">
             <graphic>
-               <FontAwesomeIconView glyphName="SHOPPING_BAG" />
+               <FontAwesomeIconView glyphName="SHOPPING_BAG" wrappingWidth="20.0" />
             </graphic>
          </Label>
-         <Button fx:id="createProductButton" mnemonicParsing="false" text="Crear Producto">
+         <Button fx:id="createProductButton" mnemonicParsing="false" text="Crear&#13;Producto">
             <graphic>
-               <FontAwesomeIconView glyphName="PLUS" />
+               <FontAwesomeIconView glyphName="PLUS" wrappingWidth="20.0" />
             </graphic>
          </Button>
          <Button fx:id="listProductsButton" mnemonicParsing="false" text="Ver Catálogo">
             <graphic>
-               <FontAwesomeIconView glyphName="LIST" />
+               <FontAwesomeIconView glyphName="LIST" wrappingWidth="20.0" />
             </graphic>
          </Button>
       </VBox>
