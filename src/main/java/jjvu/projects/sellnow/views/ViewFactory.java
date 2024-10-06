@@ -45,7 +45,7 @@ public class ViewFactory {
 
     /*
     Submenus
-     */
+    */
     public AnchorPane getMainMenuView() {
         mainMenuView = getView(mainMenuView, "MainMenu.fxml");
         return mainMenuView;
@@ -62,8 +62,8 @@ public class ViewFactory {
     }
 
     /*
-        Utility
-        */
+    Utility
+    */
     private void createStage(FXMLLoader loader) {
         Scene scene;
 
@@ -92,7 +92,7 @@ public class ViewFactory {
     private <T> T getView(T view, String source) {
         if (view == null) {
             try {
-                return createLoader(source).load();
+                view = createLoader(source).load();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
