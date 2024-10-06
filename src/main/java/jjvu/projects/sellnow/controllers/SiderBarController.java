@@ -15,19 +15,29 @@ public class SiderBarController implements Initializable {
     public Button createSaleButton;
     public Button listSalesButton;
     public Button createProductButton;
-    public Button listProductsButton;
+    public Button productTableButton;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         mainMenuButton.setOnAction(actionEvent -> onMainMenu());
         createProductButton.setOnAction(actionEvent -> onCreateProduct());
+        productTableButton.setOnAction(actionEvent -> onProductTable());
     }
 
     public void onMainMenu() {
-        Model.getInstance().getViewFactory().clientSelectedMenuItemProperty().set(SubmenuOptions.MAIN_MENU);
+        setSelectedMenu(SubmenuOptions.MAIN_MENU);
     }
 
     public void onCreateProduct() {
-        Model.getInstance().getViewFactory().clientSelectedMenuItemProperty().set(SubmenuOptions.CREATE_PRODUCT);
+        setSelectedMenu(SubmenuOptions.CREATE_PRODUCT);
+    }
+
+    public void onProductTable() {
+        setSelectedMenu(SubmenuOptions.PRODUCT_TABLE);
+    }
+
+    // Utility
+    public void setSelectedMenu(SubmenuOptions submenu) {
+        Model.getInstance().getViewFactory().clientSelectedMenuItemProperty().set(submenu);
     }
 }

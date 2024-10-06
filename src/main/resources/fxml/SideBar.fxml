@@ -64,7 +64,7 @@
                <FontAwesomeIconView glyphName="PLUS" wrappingWidth="20.0" />
             </graphic>
          </Button>
-         <Button fx:id="listProductsButton" mnemonicParsing="false" text="Ver Catálogo">
+         <Button fx:id="productTableButton" mnemonicParsing="false" text="Ver Catálogo">
             <graphic>
                <FontAwesomeIconView glyphName="LIST" wrappingWidth="20.0" />
             </graphic>

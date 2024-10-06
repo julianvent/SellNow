@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class ViewFactory {
     private final ObjectProperty<SubmenuOptions> clientSelectedMenuItem;
-    private AnchorPane dashboardView;
+    private AnchorPane mainMenuView;
     private AnchorPane createProductView;
     private AnchorPane productTableView;
 
@@ -25,8 +25,8 @@ public class ViewFactory {
     }
 
     /*
-        Login Window
-         */
+    Login Window
+    */
     public void showLoginWindow() {
         FXMLLoader loader = createLoader("Login.fxml");
         createStage(loader);
@@ -46,16 +46,19 @@ public class ViewFactory {
     /*
     Submenus
      */
-    public AnchorPane getDashboardView() {
-        return getView(dashboardView, "Dashboard.fxml");
+    public AnchorPane getMainMenuView() {
+        mainMenuView = getView(mainMenuView, "MainMenu.fxml");
+        return mainMenuView;
     }
 
     public AnchorPane getCreateProductView() {
-        return getView(createProductView, "CreateProduct.fxml");
+        createProductView = getView(createProductView, "CreateProduct.fxml");
+        return createProductView;
     }
 
     public AnchorPane getProductTableView() {
-        return getView(productTableView, "ProductTable.fxml");
+        productTableView = getView(productTableView, "ProductTable.fxml");
+        return productTableView;
     }
 
     /*
@@ -81,14 +84,15 @@ public class ViewFactory {
         stage.close();
     }
 
-    public FXMLLoader createLoader(String source) {
+    private FXMLLoader createLoader(String source) {
         return new FXMLLoader(getClass().getResource("/fxml/" + source));
     }
 
-    public <T> T getView(T view, String source) {
+    // Singleton
+    private <T> T getView(T view, String source) {
         if (view == null) {
             try {
-                view = createLoader(source).load();
+                return createLoader(source).load();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

@@ -14,13 +14,10 @@ public class ClientController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Model.getInstance().getViewFactory().clientSelectedMenuItemProperty().addListener(
                 ((observableValue, oldValue, newValue) -> {
-                    clientParent.getChildren().remove(1);
                     switch (newValue) {
-                        case CREATE_PRODUCT :
-                            clientParent.getChildren().add(Model.getInstance().getViewFactory().getCreateProductView());
-                            break;
-                        default:
-                            clientParent.getChildren().add(Model.getInstance().getViewFactory().getDashboardView());
+                        case CREATE_PRODUCT -> clientParent.getChildren().set(1, Model.getInstance().getViewFactory().getCreateProductView());
+                        case PRODUCT_TABLE -> clientParent.getChildren().set(1, Model.getInstance().getViewFactory().getProductTableView());
+                        default -> clientParent.getChildren().set(1, Model.getInstance().getViewFactory().getMainMenuView());
                     }
                 })
         );
