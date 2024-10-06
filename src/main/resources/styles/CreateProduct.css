@@ -1,0 +1,45 @@
+@import "Inter.css";
+
+.create_product_container {
+    -fx-font-family: "Inter 18pt";
+    -fx-text-fill: #111111;
+}
+
+.create_product_container_title {
+    -fx-font-weight: bold;
+    -fx-font-size: 30;
+}
+
+.product_form_container {
+    -fx-padding: 5 5;
+    -fx-spacing: 20;
+    -fx-alignment: top-left;
+}
+
+.product_form_container Text {
+    -fx-fill: #111111;
+    -fx-font-family: "Inter 18pt Medium";
+    -fx-font-size: 18;
+}
+
+.product_form_container TextField {
+    -fx-font-size: 20;
+    -fx-background-radius: 5;
+    -fx-padding: 10 14;
+}
+
+.create_product_button {
+    -fx-background-color: #EE0004;
+    -fx-background-radius: 8;
+    -fx-text-fill: #FFFFFF;
+    -fx-pref-height: 50;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-padding: 10 20;
+}
+
+.create_product_status_label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #00AA00;
+    -fx-font-size: 18;
+}
