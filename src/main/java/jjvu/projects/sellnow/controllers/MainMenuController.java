@@ -8,7 +8,7 @@ import javafx.scene.control.ListView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class DashboardController implements Initializable {
+public class MainMenuController implements Initializable {
     public Label shopNameLabel;
     public Label currentDateLabel;
     public FontAwesomeIconView fastSaleCreateButton;

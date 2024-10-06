@@ -9,9 +9,9 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="840.0" prefWidth="760.0" styleClass="dashboard_container" stylesheets="@../styles/Dashboard.css"
+<AnchorPane prefHeight="840.0" prefWidth="760.0" styleClass="main_menu_container" stylesheets="@../styles/MainMenu.css"
             xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="jjvu.projects.sellnow.controllers.DashboardController">
+            fx:controller="jjvu.projects.sellnow.controllers.MainMenuController">
     <Label fx:id="shopNameLabel" layoutX="10.0" layoutY="10.0" styleClass="shop_label" text="Nombre de la Tienda"
            AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0"/>
     <Label fx:id="currentDateLabel" styleClass="date_label" text="Hoy: 2024-10-04" AnchorPane.rightAnchor="40.0"

@@ -1,5 +1,9 @@
 package jjvu.projects.sellnow.views;
 
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -7,17 +11,23 @@ import javafx.stage.Stage;
 import jjvu.projects.sellnow.controllers.ClientController;
 
 import java.io.IOException;
-import java.net.URL;
 
 public class ViewFactory {
+    private final ObjectProperty<SubmenuOptions> clientSelectedMenuItem;
     private AnchorPane dashboardView;
     private AnchorPane createProductView;
 
-    public ViewFactory() {}
+    public ViewFactory() {
+        clientSelectedMenuItem = new SimpleObjectProperty<>(SubmenuOptions.MAIN_MENU);
+    }
+
+    public ObjectProperty<SubmenuOptions> clientSelectedMenuItemProperty() {
+        return clientSelectedMenuItem;
+    }
 
     /*
-    Login Window
-     */
+        Login Window
+         */
     public void showLoginWindow() {
         FXMLLoader loader = createLoader("Login.fxml");
         createStage(loader);
@@ -40,7 +50,7 @@ public class ViewFactory {
     public AnchorPane getDashboardView() {
         if (dashboardView == null) {
             try {
-                dashboardView = createLoader("Dashboard.fxml").load();
+                dashboardView = createLoader("MainMenu.fxml").load();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

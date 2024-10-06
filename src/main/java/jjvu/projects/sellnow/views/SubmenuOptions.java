@@ -1,6 +1,6 @@
 package jjvu.projects.sellnow.views;
 
 public enum SubmenuOptions {
-    DASHBOARD
+    MAIN_MENU
     , CREATE_PRODUCT
 }

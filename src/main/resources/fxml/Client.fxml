@@ -2,7 +2,8 @@
 
 <?import javafx.scene.layout.*?>
 
-<HBox xmlns="http://javafx.com/javafx"
+<HBox fx:id="clientParent"
+        xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             prefHeight="850" prefWidth="1000"
             style="-fx-padding: 5; -fx-background-color: #FFFFFF; -fx-spacing: 10" >
@@ -10,7 +11,7 @@
         <fx:include source="SideBar.fxml"/>
     </VBox>
     <VBox>
-        <fx:include source="Dashboard.fxml"/>
+        <fx:include source="MainMenu.fxml"/>
     </VBox>
 
 </HBox>
