@@ -38,7 +38,7 @@ public class DatabaseDriver {
         Statement statement;
 
         try {
-            statement = this.connection.createStatement();
+            statement = connection.createStatement();
             statement.executeUpdate(String.format(
                     "INSERT INTO product (%s) VALUES (%d, \"%s\", %f, \"%s\", %d, %d);"
                     , "userID, name, unitPrice, category, stock, minStock", userID, name, unitPrice, category, stock, minStock)
@@ -46,6 +46,21 @@ public class DatabaseDriver {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public ResultSet getAllProducts() {
+        Statement statement;
+        ResultSet resultSet;
+
+        try {
+            statement = connection.createStatement();
+            resultSet = statement.executeQuery("SELECT * FROM product WHERE userID = "
+                    + Integer.parseInt(Model.getInstance().getLoggedUser().getId()) + ";");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return resultSet;
     }
 
     public void closeConnection() throws SQLException {
