@@ -55,6 +55,7 @@ public class Model {
                 this.loggedUser.idProperty().set(resultSet.getString("id"));
                 this.loggedUser.usernameProperty().set(resultSet.getString("username"));
                 this.loggedUser.shopNameProperty().set(resultSet.getString("shopName"));
+                this.loginSuccessFlag = true;
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

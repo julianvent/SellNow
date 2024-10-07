@@ -24,8 +24,14 @@ public class LoginController implements Initializable {
     public void onLogin() {
         // Close Login window
         Stage stage = (Stage)loginButton.getScene().getWindow();
-        Model.getInstance().getViewFactory().closeStage(stage);
 
-        Model.getInstance().getViewFactory().showClientWindow();
+        Model.getInstance().evaluateCredentials(usernameField.getText(), passwordField.getText());
+
+        if (Model.getInstance().getLoginSuccessFlag()) {
+            Model.getInstance().getViewFactory().closeStage(stage);
+            Model.getInstance().getViewFactory().showClientWindow();
+        } else {
+            errorLabel.setText("Nombre de usuario o contraseña incorrectos.");
+        }
     }
 }

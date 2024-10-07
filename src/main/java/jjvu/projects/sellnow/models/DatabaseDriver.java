@@ -7,7 +7,7 @@ public class DatabaseDriver {
 
     public DatabaseDriver() {
         try {
-            connection = DriverManager.getConnection("jbbc:sqlite:sellnow.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:sellnow.db");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -23,7 +23,7 @@ public class DatabaseDriver {
         try {
             statement = connection.createStatement();
             resultSet = statement.executeQuery(String.format(
-                    "SELECT * FROM %s WHERE username=%s AND password=%s"
+                    "SELECT * FROM %s WHERE username=\"%s\" AND password=\"%s\";"
                     , "user", username, password)
             );
         } catch (SQLException e) {
