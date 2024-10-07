@@ -1,6 +1,5 @@
 package jjvu.projects.sellnow.controllers;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
