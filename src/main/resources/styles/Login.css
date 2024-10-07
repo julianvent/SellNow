@@ -59,6 +59,14 @@
     -fx-border-width: 0;
 }
 
+.login_form_container PasswordField {
+    -fx-font-size: 18px;
+    -fx-padding: 12 10;
+    -fx-border-color: #D9D9D9;
+    -fx-border-radius: 10;
+    -fx-border-width: 0;
+}
+
 .login_form_container Button {
     -fx-background-color: #EE0004;
     -fx-text-fill: #FFFFFF;

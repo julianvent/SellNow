@@ -3,6 +3,7 @@ package jjvu.projects.sellnow.controllers;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import jjvu.projects.sellnow.models.Model;
@@ -12,7 +13,7 @@ import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
     public TextField usernameField;
-    public TextField passwordField;
+    public PasswordField passwordField;
     public Button loginButton;
     public Label errorLabel;
 

@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.PasswordField?>
 <AnchorPane prefHeight="500.0" prefWidth="700.0" styleClass="login_container" stylesheets="@../styles/Login.css" xmlns="http://javafx.com/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.LoginController">
     <VBox prefHeight="500.0" prefWidth="220.0" styleClass="login_logo_container">
         <FontAwesomeIconView glyphName="SHOPPING_CART" size="70" />
@@ -20,7 +21,7 @@
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de Usuario:" />
             <TextField fx:id="usernameField" promptText="Username" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña:" />
-            <TextField fx:id="passwordField" promptText="Password" />
+            <PasswordField fx:id="passwordField" promptText="Password" />
             <Button fx:id="loginButton" mnemonicParsing="false" text="Acceder" />
         </VBox>
         <Label fx:id="errorLabel" styleClass="error_label" />
