@@ -2,6 +2,7 @@ package jjvu.projects.sellnow.controllers;
 
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import jjvu.projects.sellnow.models.Model;
 import jjvu.projects.sellnow.views.SubmenuOptions;
 
@@ -22,18 +23,27 @@ public class SiderBarController implements Initializable {
         mainMenuButton.setOnAction(actionEvent -> onMainMenu());
         createProductButton.setOnAction(actionEvent -> onCreateProduct());
         productTableButton.setOnAction(actionEvent -> onProductTable());
+        logoutButton.setOnAction(actionEvent -> onLogout());
     }
 
-    public void onMainMenu() {
+    private void onMainMenu() {
         setSelectedMenu(SubmenuOptions.MAIN_MENU);
     }
 
-    public void onCreateProduct() {
+    private void onCreateProduct() {
         setSelectedMenu(SubmenuOptions.CREATE_PRODUCT);
     }
 
-    public void onProductTable() {
+    private void onProductTable() {
         setSelectedMenu(SubmenuOptions.PRODUCT_TABLE);
+    }
+
+    private void onLogout() {
+        Stage stage = (Stage)logoutButton.getScene().getWindow();
+        Model.getInstance().getViewFactory().closeStage(stage);
+        Model.getInstance().resetModel();
+        Model.getInstance().getViewFactory().showLoginWindow();
+        Model.getInstance().setLoginSuccessFlag(false);
     }
 
     // Utility

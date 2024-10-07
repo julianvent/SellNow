@@ -61,4 +61,8 @@ public class Model {
             throw new RuntimeException(e);
         }
     }
+
+    public void resetModel() {
+        model = new Model();
+    }
 }

@@ -22,7 +22,7 @@ public class LoginController implements Initializable {
         loginButton.setOnAction(actionEvent -> onLogin());
     }
 
-    public void onLogin() {
+    private void onLogin() {
         // Close Login window
         Stage stage = (Stage)loginButton.getScene().getWindow();
 
