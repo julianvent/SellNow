@@ -1,5 +1,5 @@
 package jjvu.projects.sellnow.controllers;
 
 public class ProductTableRowController {
-    // TODO
+    // TODO not implemented in this project
 }
