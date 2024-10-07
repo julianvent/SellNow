@@ -62,7 +62,8 @@ public class Model {
         }
     }
 
-    public void resetModel() {
+    public void resetModel() throws SQLException {
+        model.getDatabaseDriver().closeConnection();
         model = new Model();
     }
 }

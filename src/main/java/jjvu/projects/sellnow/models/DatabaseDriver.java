@@ -8,6 +8,7 @@ public class DatabaseDriver {
     public DatabaseDriver() {
         try {
             connection = DriverManager.getConnection("jdbc:sqlite:sellnow.db");
+            System.out.println("Conexion a la BD");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -31,5 +32,23 @@ public class DatabaseDriver {
         }
 
         return resultSet;
+    }
+
+    public void createProduct(int userID, String name, double unitPrice, String category, int stock, int minStock) {
+        Statement statement;
+
+        try {
+            statement = this.connection.createStatement();
+            statement.executeUpdate(String.format(
+                    "INSERT INTO product (%s) VALUES (%d, \"%s\", %f, \"%s\", %d, %d);"
+                    , "userID, name, unitPrice, category, stock, minStock", userID, name, unitPrice, category, stock, minStock)
+            );
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void closeConnection() throws SQLException {
+        connection.close();
     }
 }

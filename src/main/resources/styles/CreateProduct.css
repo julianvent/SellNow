@@ -44,6 +44,5 @@ Button:hover {
 
 .create_product_status_label {
     -fx-font-weight: bold;
-    -fx-text-fill: #00AA00;
     -fx-font-size: 18;
 }

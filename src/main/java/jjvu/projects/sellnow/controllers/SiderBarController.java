@@ -7,6 +7,7 @@ import jjvu.projects.sellnow.models.Model;
 import jjvu.projects.sellnow.views.SubmenuOptions;
 
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SiderBarController implements Initializable {
@@ -41,7 +42,13 @@ public class SiderBarController implements Initializable {
     private void onLogout() {
         Stage stage = (Stage)logoutButton.getScene().getWindow();
         Model.getInstance().getViewFactory().closeStage(stage);
-        Model.getInstance().resetModel();
+
+        try {
+            Model.getInstance().resetModel();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
         Model.getInstance().getViewFactory().showLoginWindow();
         Model.getInstance().setLoginSuccessFlag(false);
     }
