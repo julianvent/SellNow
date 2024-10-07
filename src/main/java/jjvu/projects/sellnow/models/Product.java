@@ -3,15 +3,15 @@ package jjvu.projects.sellnow.models;
 import javafx.beans.property.*;
 
 public class Product {
-    private IntegerProperty id;
+    private StringProperty id;
     private StringProperty name;
     private DoubleProperty unitPrice;
     private StringProperty category;
     private IntegerProperty stock;
     private IntegerProperty minStock;
 
-    public Product(int id, String name, double unitPrice, String category, int stock, int minStock) {
-        this.id = new SimpleIntegerProperty(this, "id", id);
+    public Product(String id, String name, double unitPrice, String category, int stock, int minStock) {
+        this.id = new SimpleStringProperty(this, "id", id);
         this.name = new SimpleStringProperty(this, "name", name);
         this.unitPrice = new SimpleDoubleProperty(this, "unitPrice", unitPrice);
         this.category = new SimpleStringProperty(this, "category", category);
@@ -19,15 +19,15 @@ public class Product {
         this.minStock = new SimpleIntegerProperty(this, "minStock", minStock);
     }
 
-    public int getId() {
+    public String getId() {
         return id.get();
     }
 
-    public IntegerProperty idProperty() {
+    public StringProperty idProperty() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id.set(id);
     }
 

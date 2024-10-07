@@ -27,8 +27,8 @@ public class ProductTableController implements Initializable {
         setProperties();
 
         productList = FXCollections.observableArrayList();
-        productList.add(new Product(1, "Pepsi 3L", 41.0, "Bebidas", 10, 1));
-        productList.add(new Product(2, "Sabritas", 18.0, "Alimentos", 10, 1));
+        productList.add(new Product("1", "Pepsi 3L", 41.0, "Bebidas", 10, 1));
+        productList.add(new Product("2", "Sabritas", 18.0, "Alimentos", 10, 1));
 
         productsTableView.setItems(productList);
     }

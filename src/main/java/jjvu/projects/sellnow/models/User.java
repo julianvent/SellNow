@@ -6,25 +6,25 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class User {
-    private IntegerProperty id;
+    private StringProperty id;
     private StringProperty username;
     private StringProperty shopName;
 
-    public User(int id, String username, String shopName) {
-        this.id = new SimpleIntegerProperty(this, "id", id);
+    public User(String id, String username, String shopName) {
+        this.id = new SimpleStringProperty(this, "id", id);
         this.username = new SimpleStringProperty(this, "username", username);
         this.shopName = new SimpleStringProperty(this, "shopName", shopName);
     }
 
-    public int getId() {
+    public String getId() {
         return id.get();
     }
 
-    public IntegerProperty idProperty() {
+    public StringProperty idProperty() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id.set(id);
     }
 
