@@ -7,14 +7,14 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="840.0" prefWidth="750.0" styleClass="product_list_container" stylesheets="@../styles/ProductTable.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jjvu.projects.sellnow.controllers.ProductTableController">
-    <TableView fx:id="productsTableView" prefWidth="680.0" styleClass="product_table" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="90.0" >
-      <columns>
-          <TableColumn fx:id="id" prefWidth="79" text="ID" style="-fx-font-weight: bold" resizable="false" reorderable="false"/>
-          <TableColumn fx:id="name" prefWidth="240.0" text="Nombre" resizable="false" reorderable="false" />
-          <TableColumn fx:id="category" prefWidth="240.0" text="Categoría" resizable="false" reorderable="false" />
-          <TableColumn fx:id="unitPrice" prefWidth="119.0" text="Precio" style="-fx-font-weight: bold; -fx-text-fill: #00AA00;" resizable="false" reorderable="false" />
-      </columns>
-    </TableView>
     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_list_container_title" text="Catálogo de Productos" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="24.0" />
     <Line endY="750.0" stroke="#cccccc" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="73.0" />
+    <TableView fx:id="productsTableView" prefHeight="680" styleClass="product_table" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="90.0">
+      <columns>
+          <TableColumn fx:id="id" reorderable="false" resizable="false" style="-fx-font-weight: bold" text="ID" />
+          <TableColumn fx:id="name" reorderable="false" resizable="false" text="Nombre" />
+          <TableColumn fx:id="category" minWidth="-1.0" reorderable="false" resizable="false" text="Categoría" />
+          <TableColumn fx:id="unitPrice" reorderable="false" resizable="false" style="-fx-font-weight: bold; -fx-text-fill: #00AA00;" text="Precio" />
+      </columns>
+    </TableView>
 </AnchorPane>

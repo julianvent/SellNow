@@ -1,5 +1,6 @@
 package jjvu.projects.sellnow.models;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import jjvu.projects.sellnow.views.ViewFactory;
 
@@ -20,6 +21,7 @@ public class Model {
         databaseDriver = new DatabaseDriver();
         loginSuccessFlag = false;
         loggedUser = new User("", "", "");
+        products = FXCollections.observableArrayList();
     }
 
     public static synchronized Model getInstance() {
@@ -70,6 +72,8 @@ public class Model {
 
     public void setProducts() {
         ResultSet resultSet = databaseDriver.getAllProducts();
+        System.out.println("set products");
+        products.clear();
 
         try {
             while (resultSet.next()) {
@@ -90,5 +94,4 @@ public class Model {
         model.getDatabaseDriver().closeConnection();
         model = new Model();
     }
-
 }

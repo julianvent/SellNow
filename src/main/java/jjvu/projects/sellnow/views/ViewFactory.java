@@ -57,7 +57,7 @@ public class ViewFactory {
     }
 
     public AnchorPane getProductTableView() {
-        productTableView = getView(productTableView, "ProductTable.fxml");
+        productTableView = refreshView("ProductTable.fxml");
         return productTableView;
     }
 
@@ -97,6 +97,17 @@ public class ViewFactory {
                 throw new RuntimeException(e);
             }
         }
+        return view;
+    }
+
+    private <T> T refreshView(String source) {
+        T view;
+        try {
+            view = createLoader(source).load();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
         return view;
     }
 }
