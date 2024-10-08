@@ -77,7 +77,7 @@ public class Model {
 
         try {
             while (resultSet.next()) {
-                String id = resultSet.getString("id");
+                int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
                 Double unitPrice = resultSet.getDouble("unitPrice");
                 String category = resultSet.getString("category");

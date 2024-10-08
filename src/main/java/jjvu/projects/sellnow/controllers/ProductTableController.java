@@ -1,5 +1,6 @@
 package jjvu.projects.sellnow.controllers;
 
+import javafx.beans.binding.Bindings;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
