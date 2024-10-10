@@ -34,14 +34,14 @@ public class DatabaseDriver {
         return resultSet;
     }
 
-    public void createProduct(int userID, String name, double unitPrice, String category, int stock, int minStock) {
+    public void createProduct(int userID, String productID, String name, double unitPrice, String category, int stock, int minStock) {
         Statement statement;
 
         try {
             statement = connection.createStatement();
             statement.executeUpdate(String.format(
-                    "INSERT INTO product (%s) VALUES (%d, \"%s\", %f, \"%s\", %d, %d);"
-                    , "userID, name, unitPrice, category, stock, minStock", userID, name, unitPrice, category, stock, minStock)
+                    "INSERT INTO product (%s) VALUES (%d, '%s','%s', %f, '%s', %d, %d);"
+                    , "userID, productID, name, unitPrice, category, stock, minStock", userID, productID, name, unitPrice, category, stock, minStock)
             );
         } catch (SQLException e) {
             e.printStackTrace();

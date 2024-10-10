@@ -77,13 +77,13 @@ public class Model {
 
         try {
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
+                String productID = resultSet.getString("productID");
                 String name = resultSet.getString("name");
-                Double unitPrice = resultSet.getDouble("unitPrice");
+                double unitPrice = resultSet.getDouble("unitPrice");
                 String category = resultSet.getString("category");
                 int stock = resultSet.getInt("stock");
                 int minStock = resultSet.getInt("minStock");
-                products.add(new Product(id, name, unitPrice, category, stock, minStock));
+                products.add(new Product(productID, name, unitPrice, category, stock, minStock));
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);

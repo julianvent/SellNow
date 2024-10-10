@@ -1,6 +1,5 @@
 package jjvu.projects.sellnow.controllers;
 
-import javafx.beans.binding.Bindings;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,7 +14,7 @@ public class ProductTableController implements Initializable {
     public TableView<Product> productsTableView;
 
 
-    public TableColumn<Product, Integer> id;
+    public TableColumn<Product, String> productID;
     public TableColumn<Product, String> name;
     public TableColumn<Product, String> category;
     public TableColumn<Product, Double> unitPrice;
@@ -28,7 +27,7 @@ public class ProductTableController implements Initializable {
     }
 
     private void setProperties() {
-        id.setCellValueFactory(new PropertyValueFactory<>("id"));
+        productID.setCellValueFactory(new PropertyValueFactory<>("productID"));
         name.setCellValueFactory(new PropertyValueFactory<>("name"));
         category.setCellValueFactory(new PropertyValueFactory<>("category"));
         unitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));

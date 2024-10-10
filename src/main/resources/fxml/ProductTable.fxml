@@ -11,7 +11,7 @@
     <Line endY="750.0" stroke="#cccccc" AnchorPane.leftAnchor="28.0" AnchorPane.topAnchor="73.0" />
     <TableView fx:id="productsTableView" prefHeight="680" prefWidth="660.0" styleClass="product_table" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="90.0">
       <columns>
-          <TableColumn fx:id="id" prefWidth="70.0" reorderable="false" style="-fx-font-weight: bold" text="ID" />
+          <TableColumn fx:id="productID" prefWidth="70.0" reorderable="false" style="-fx-font-weight: bold" text="ID" />
           <TableColumn fx:id="name" prefWidth="220.0" reorderable="false" text="Nombre" />
           <TableColumn fx:id="category" minWidth="-1.0" prefWidth="220.0" reorderable="false" text="Categoría" />
           <TableColumn fx:id="unitPrice" prefWidth="148.0" reorderable="false" style="-fx-font-weight: bold; -fx-text-fill: #00AA00;" text="Precio" />

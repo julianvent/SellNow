@@ -4,14 +4,15 @@ import javafx.beans.property.*;
 
 public class Product {
     private IntegerProperty id;
+    private StringProperty productID;
     private StringProperty name;
     private DoubleProperty unitPrice;
     private StringProperty category;
     private IntegerProperty stock;
     private IntegerProperty minStock;
 
-    public Product(int id, String name, double unitPrice, String category, int stock, int minStock) {
-        this.id = new SimpleIntegerProperty(this, "id", id);
+    public Product(String productID, String name, double unitPrice, String category, int stock, int minStock) {
+        this.productID = new SimpleStringProperty(this, "productID", productID);
         this.name = new SimpleStringProperty(this, "name", name);
         this.unitPrice = new SimpleDoubleProperty(this, "unitPrice", unitPrice);
         this.category = new SimpleStringProperty(this, "category", category);
@@ -29,6 +30,18 @@ public class Product {
 
     public void setId(int id) {
         this.id.set(id);
+    }
+
+    public String getProductID() {
+        return productID.get();
+    }
+
+    public StringProperty productIDProperty() {
+        return productID;
+    }
+
+    public void setProductID(String productID) {
+        this.productID.set(productID);
     }
 
     public String getName() {

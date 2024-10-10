@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class CreateProductController implements Initializable {
+    public TextField productIDField;
     public TextField productNameField;
     public TextField unitPriceField;
     public TextField categoryField;
@@ -27,6 +28,7 @@ public class CreateProductController implements Initializable {
         try {
             Model.getInstance().getDatabaseDriver().createProduct(
                     Integer.parseInt(Model.getInstance().getLoggedUser().getId())
+                    , productIDField.getText()
                     , productNameField.getText()
                     , Double.parseDouble(unitPriceField.getText())
                     , categoryField.getText()
@@ -40,5 +42,15 @@ public class CreateProductController implements Initializable {
             createStatusLabel.setStyle("-fx-text-fill: #EE0004");
             throw new RuntimeException(e);
         }
+        emptyFields();
+    }
+
+    private void emptyFields() {
+        productIDField.setText("");
+        productNameField.setText("");
+        unitPriceField.setText("");
+        categoryField.setText("");
+        stockField.setText("");
+        minStockField.setText("");
     }
 }
